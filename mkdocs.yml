@@ -1,0 +1,9 @@
+site_name: ChurnSight Analytics
+theme:
+  name: material
+  palette:
+    primary: blue
+nav:
+  - Home: index.md
+  - Methodology: methodology.md
+  - Architecture: architecture.md
