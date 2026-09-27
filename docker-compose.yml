@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  dashboard:
+    build: .
+    container_name: churnsight_dashboard
+    ports:
+      - "8501:8501"
+    volumes:
+      # Mount the local data directory so new CSVs appear without rebuilding
+      - ./data:/app/data
+      # Optional: Mount the app directory for live-reloading during development
+      - ./app:/app/app
+    environment:
+      - PYTHONUNBUFFERED=1
